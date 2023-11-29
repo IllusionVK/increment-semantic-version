@@ -44,7 +44,19 @@ main() {
     ((++major)); minor=0; patch=0; pre="";;
   "feature")
     ((++minor)); patch=0; pre="";;
+  "feat")
+    ((++minor)); patch=0; pre="";;
+  "Feat")
+    ((++minor)); patch=0; pre="";;
   "bug")
+    ((++patch)); pre="";;
+  "fix")
+    ((++patch)); pre="";;
+  "Fix")
+    ((++patch)); pre="";;
+  "test")
+    ((++patch)); pre="";;
+  "Test")
     ((++patch)); pre="";;
   "alpha")
     if [[ -z "$preversion" ]];
